@@ -6,16 +6,6 @@ import {AiOutlineLoading} from 'react-icons/ai';
 import {MdExpandMore} from 'react-icons/md';
 import {Card} from "@/components";
 import { mealListFetch } from "@/api";
-export const getStaticProps=async ()=>{
-    const res=await fetch("https://api.edamam.com/api/recipes/v2?type=public&app_id=c558f139&app_key=1d0744b6782077580691fd347d9508d6&random=true&q=indian");
-    const data=await res.json();
-    console.log(data);
-    return {
-        props:{
-            data
-        }
-    }
-}
 
 const SearchRecipe=()=>{ 
     const [loader,setLoader]=useState(false);
