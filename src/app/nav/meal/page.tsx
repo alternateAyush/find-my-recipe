@@ -58,7 +58,7 @@ const Meal=()=>{
             <h1 className='text-3xl text-lime-600 font-semibold my-2'>Ingredients</h1>
             <div className='flex flex-col w-full'>
                 {recipe.ingredients?.map((item:any,idx:any)=>{
-                    return <ListItem key={idx} item={item?.text} img={item?.img}/>
+                    return <ListItem key={idx} item={item?.text} img={item?.image}/>
                 })}
             </div>
         </div>

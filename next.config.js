@@ -5,6 +5,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["edamam-product-images.s3.amazonaws.com"],
+    domains: ["edamam-product-images.s3.amazonaws.com", "www.edamam.com"],
   },
 };

@@ -8,7 +8,7 @@ const fetchData=async(url:string)=>{
     return data;
 }
 export const mealListFetch=(searchQuery:string)=>{
-    return fetchData(`${baseUrl}&q=${searchQuery}&random=true`);
+    return fetchData(`${baseUrl}&q=${searchQuery}&random=false`);
 }
 export const mealRecipeFetch=(mealId:any)=>{
     return fetchData(`https://api.edamam.com/api/recipes/v2/${mealId}?type=public&app_id=${apiId}&app_key=${apiKey}`);

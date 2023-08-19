@@ -23,7 +23,7 @@ const SearchRecipe=()=>{
     }
     return <main className="pt-20 relative">
         <div className="py-5 z-40 w-full fixed t-0 r-0 bg-transparent flex flex-row justify-center items-center">
-            <div className="w-full md:w-1/3">
+            <div className="m-2 w-full md:w-1/3 md:m-0">
                 <SearchBar 
                 searchQuery={searchQuery} 
                 setSearchQuery={setSearchQuery}
