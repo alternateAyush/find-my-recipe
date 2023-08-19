@@ -5,7 +5,7 @@ import { useState,useEffect} from "react";
 import {AiOutlineLoading} from 'react-icons/ai';
 import {MdExpandMore} from 'react-icons/md';
 import {Card} from "@/components";
-import { mealListFetch } from "@/api";
+import { moreMealListFetch } from "@/api";
 
 const SearchRecipe=()=>{ 
     const [loader,setLoader]=useState(false);
@@ -14,12 +14,16 @@ const SearchRecipe=()=>{
     const [mealList,setMealList] = useState([]);
     const handleGetMore=async ()=>{
         setMoreLoader(true);
-        const meals=await mealListFetch(searchQuery);
-        const newArr:any=[];
-        newArr.push(...mealList);
-        newArr.push(...meals.hits);
-        setMealList(newArr);
-        setMoreLoader(false);
+        const meals=await moreMealListFetch(searchQuery);
+        if(meals.success)
+        {
+            const newArr:any=[];
+            newArr.push(...mealList);
+            newArr.push(...meals.data.hits);
+            setMealList(newArr);
+            setMoreLoader(false);
+        }
+        
     }
     return <main className="pt-20 relative">
         <div className="py-5 z-40 w-full fixed t-0 r-0 bg-transparent flex flex-row justify-center items-center">

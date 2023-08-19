@@ -18,8 +18,11 @@ const SearchBar=({searchQuery,setSearchQuery,setMealList,setLoader}:Props)=>{
     const handleSearch=async ()=>{
         setLoader(true);
         const meals=await mealListFetch(searchQuery);
-        setMealList(meals.hits);
-        setLoader(false);
+        if(meals.success)
+        {
+            setMealList(meals.data.hits);
+            setLoader(false);
+        }        
     }
     return <div className='w-full flex flex-row justify-center items-stretch bg-white shadow rounded-full p-1'>
         <input onChange={(e)=>{handleOnChange(e)}} className='bg-white w-full text-base text-lime-700 py-1 px-2 focus:outline-0 border-l rounded-l-full border-white'/>
