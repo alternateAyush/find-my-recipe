@@ -9,6 +9,7 @@ const Navbar=()=>{
         <ul className='flex flex-row space-x-4'>
             <Link href='/'>Home</Link>
             <Link href='/nav/searchRecipe'>Search</Link>
+            {/* <Link href='/nav/bmiCalculator'>BMI Calculator</Link> */}
             <Link href=''>About</Link>
         </ul>
     </header>

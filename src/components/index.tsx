@@ -5,6 +5,7 @@ import Label from "./Label";
 import ListItem from "./ListItem";
 import LabelList from "./LabelList";
 import CollapsableList from "./CollapsableList";
+import FiltersCard from "./FiltersCard";
 
 export {
     Navbar,
@@ -13,5 +14,6 @@ export {
     Label,
     ListItem,
     LabelList,
-    CollapsableList
+    CollapsableList,
+    FiltersCard
 };
